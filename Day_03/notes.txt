@@ -1,0 +1,9 @@
+// make a new route for admin registartion
+only admin can regeister anyone as admin
+
+how does the 1st admin gets regeistered?
+we can manually registered it from database, or first register one as admin then apply this different route.
+
+
+
+made problem schema 
