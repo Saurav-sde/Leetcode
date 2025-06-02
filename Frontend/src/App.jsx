@@ -5,6 +5,8 @@ import Homepage from './pages/Homepage';
 import { checkAuth } from './authSlice';
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from 'react';
+import CodeEditor from './pages/EditorPanel';
+import AdminPanel from './pages/AdminPanel';
 
 function App() {
 
@@ -31,6 +33,7 @@ function App() {
         <Route path='/login' element={isAuthenticated?<Navigate to="/"/>:<Login></Login>}></Route>
         <Route path='/signup' element={isAuthenticated?<Navigate to="/"/>:<Signup></Signup>}></Route>
         <Route path='/admin' element={<AdminPanel/>}></Route>
+        <Route path='/codeEditor' element={<CodeEditor/>}></Route>
       </Routes>
     </>
   )
