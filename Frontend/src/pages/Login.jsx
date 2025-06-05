@@ -16,11 +16,7 @@ function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const{isAuthenticated, loading } = useSelector((state) => state.auth);
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ resolver: zodResolver(loginSchema) });
+  const { register, handleSubmit, formState: { errors }, } = useForm({ resolver: zodResolver(loginSchema) });
 
   useEffect(()=> {
     if(isAuthenticated){

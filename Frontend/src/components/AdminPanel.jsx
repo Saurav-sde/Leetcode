@@ -39,12 +39,7 @@ const problemSchema = z.object({
 
 function AdminPanel() {
   const navigate = useNavigate();
-  const {
-    register,
-    control,
-    handleSubmit,
-    formState: { errors }
-  } = useForm({
+  const { register, control, handleSubmit, formState: { errors } } = useForm({
     resolver: zodResolver(problemSchema),
     defaultValues: {
       startCode: [
@@ -65,11 +60,7 @@ function AdminPanel() {
     name: 'visibleTestCases'
   });
 
-  const {
-    fields: hiddenFields,
-    append: appendHidden,
-    remove: removeHidden
-  } = useFieldArray({
+  const { fields: hiddenFields, append: appendHidden, remove: removeHidden } = useFieldArray({
     control,
     name: 'hiddenTestCases'
   });
